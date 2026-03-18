@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Eriane Loraine | Portfolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            /* Updated to a soothing sage green and soft cream gradient */
+            background: linear-gradient(135deg, #e3f9e9, #d1e8da, #fdfcf1);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            min-height: 100vh;
+        }
+
+        .profile-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            backdrop-filter: blur(10px);
+            /* Glassmorphism effect */
+        }
+
+        .profile-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            /* Circular profile for a chic look */
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 5px solid #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .navbar {
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        .nav-link {
+            /* Changed nav links to a professional green */
+            color: #2e7d32 !important;
+            font-weight: 500;
+        }
+
+        .badge-green {
+            /* Custom green badge color */
+            background-color: #81c784;
+            color: white;
+        }
+
+        .section-title {
+            /* Deep, calming green for titles */
+            color: #1b5e20;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container py-5">
+        <div class="row">
+
+            <div class="col-md-4 mb-4">
+                <div class="profile-card">
+                    <img src="profile.jpg" alt="Eriane Loraine">
+                    <h4>Eriane Loraine M. Ladra</h4>
+                    <p class="text-muted">IT Student & Web Developer</p>
+
+                    <hr>
+
+                    <p><strong>Email</strong><br>erianelorainem@gmail.com</p>
+                    <p><strong>Phone</strong><br>Upon Request</p>
+                    <p><strong>Education</strong><br>PUP Sto. Tomas Campus<br>DIT 2-1</p>
+                    <p><strong>Location</strong><br>Tanauan City, Batangas</p>
+
+                    <div class="d-flex justify-content-center gap-2 mt-3">
+                        <span class="badge badge-green">Minimalist</span>
+                        <span class="badge badge-green">Fresh UI</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+
+                <nav class="navbar navbar-expand navbar-light bg-white px-4 mb-4">
+                    <div class="navbar-nav w-100 justify-content-between">
+                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#projects">Projects</a>
+                        <a class="nav-link" href="#skills">Skills</a>
+                        <a class="nav-link" href="#hobbies">Life</a>
+                    </div>
+                </nav>
+
+                <div class="content-wrapper">
+
+                    <section id="about" class="mb-5">
+                        <h2 class="section-title">About Me</h2>
+                        <div class="card border-0 shadow-sm p-4">
+                            <p class="lead">I am a 2nd-year Information Technology student with a passion for clean,
+                                minimalist web design.</p>
+                            <p>Currently, I am focusing on mastering the <strong>TCP/IP Protocol Suite</strong> and
+                                <strong>Windows Server 2022</strong> while building front-end projects that emphasize
+                                glassmorphism UI and a clean green aesthetic.</p>
+                        </div>
+                    </section>
+
+                    <section id="projects" class="mb-5">
+                        <h2 class="section-title">Featured Projects</h2>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="info-card">
+                                    <h5>💄 Core Cosmetics</h5>
+                                    <p class="small text-muted">A minimalist web platform for a beauty brand featuring
+                                        custom video players and BINI-inspired audio integration.</p>
+                                    <span class="badge bg-light text-dark">HTML/CSS</span>
+                                    <span class="badge bg-light text-dark">JS</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-card">
+                                    <h5>⚡ Power Trail</h5>
+                                    <p class="small text-muted">A collaborative Computer Programming 2 project hosted on
+                                        GitHub.</p>
+                                    <span class="badge bg-light text-dark">GitHub</span>
+                                    <span class="badge bg-light text-dark">Collaboration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <h2 class="section-title" id="skills">Technical Skills</h2>
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-6">
+                            <div class="info-card">
+                                <h5>Web Development</h5>
+                                <p>Building responsive sites with <strong>Bootstrap 5</strong>, focusing on
+                                    glassmorphism and modern UI trends.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-card">
+                                <h5>Networking</h5>
+                                <p>In-depth research on <strong>TCP/IP implementations</strong> and server
+                                    administration via Active Directory.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section id="hobbies" class="mb-5">
+                        <h2 class="section-title">Beyond IT</h2>
+                        <div class="card border-0 shadow-sm p-4" style="background: rgba(255, 255, 255, 0.5);">
+                            <div class="row align-items-center">
+                                <div class="col-sm-8">
+                                    <h5>Home Baker & Cinephile</h5>
+                                    <p>When I'm not coding, I scale recipes for <strong>Basque Burnt
+                                            Cheesecakes</strong> and cinnamon buns, or binge-watch <em>Suits</em>.</p>
+                                </div>
+                                <div class="col-sm-4 text-center">
+                                    <span style="font-size: 3rem;">🍰</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
