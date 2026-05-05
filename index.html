@@ -62,12 +62,19 @@
         .badge-green {
             background-color: #81c784;
             color: white;
+            padding: 5px 10px;
+            border-radius: 8px;
+            font-size: 0.8rem;
         }
 
         .section-title {
             color: #1b5e20;
             font-weight: bold;
             margin-bottom: 20px;
+        }
+
+        .content-wrapper section {
+            scroll-margin-top: 100px;
         }
     </style>
 </head>
@@ -91,8 +98,8 @@
                     <p><strong>Location</strong><br>Tanauan City, Batangas</p>
 
                     <div class="d-flex justify-content-center gap-2 mt-3">
-                        <span class="badge badge-green">Minimalist</span>
-                        <span class="badge badge-green">Fresh UI</span>
+                        <span class="badge-green">Minimalist</span>
+                        <span class="badge-green">Fresh UI</span>
                     </div>
                 </div>
             </div>
@@ -124,11 +131,22 @@
                     <section id="projects" class="mb-5">
                         <h2 class="section-title">Featured Projects</h2>
                         <div class="row g-4">
+                            
+                            <!-- HETO YUNG ORIGINAL NA LINK -->
                             <div class="col-md-12 mb-2">
                                 <div class="info-card" style="border-left: 5px solid #1b5e20;">
                                     <h5>📂 Current Activity Repository</h5>
                                     <p class="small text-muted">Access all my latest web development activities and school projects here.</p>
                                     <a href="https://erianeee.github.io/eri.github.io/" target="_blank" class="btn btn-link p-0 text-success fw-bold">Open Repository →</a>
+                                </div>
+                            </div>
+
+                            <!-- HETO YUNG BAGONG LINK PARA SA MIDTERMS -->
+                            <div class="col-md-12 mb-2">
+                                <div class="info-card" style="border-left: 5px solid #1b5e20;">
+                                    <h5>📂 Midterm Activity Repository</h5>
+                                    <p class="small text-muted">Specific repository for midterm requirements and activities.</p>
+                                    <a href="https://erianeee.github.io/midterms/" target="_blank" class="btn btn-link p-0 text-success fw-bold">Open Midterms →</a>
                                 </div>
                             </div>
 
@@ -141,6 +159,7 @@
                                     <span class="badge bg-light text-dark">JS</span>
                                 </div>
                             </div>
+
                             <div class="col-md-6">
                                 <div class="info-card">
                                     <h5>⚡ Power Trail</h5>
@@ -153,23 +172,25 @@
                         </div>
                     </section>
 
-                    <h2 class="section-title" id="skills">Technical Skills</h2>
-                    <div class="row g-4 mb-5">
-                        <div class="col-md-6">
-                            <div class="info-card">
-                                <h5>Web Development</h5>
-                                <p>Building responsive sites with <strong>Bootstrap 5</strong>, focusing on
-                                    glassmorphism and modern UI trends.</p>
+                    <section id="skills" class="mb-5">
+                        <h2 class="section-title">Technical Skills</h2>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="info-card">
+                                    <h5>Web Development</h5>
+                                    <p>Building responsive sites with <strong>Bootstrap 5</strong>, focusing on
+                                        glassmorphism and modern UI trends.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-card">
+                                    <h5>Networking</h5>
+                                    <p>In-depth research on <strong>TCP/IP implementations</strong> and server
+                                        administration via Active Directory.</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="info-card">
-                                <h5>Networking</h5>
-                                <p>In-depth research on <strong>TCP/IP implementations</strong> and server
-                                    administration via Active Directory.</p>
-                            </div>
-                        </div>
-                    </div>
+                    </section>
 
                     <section id="hobbies" class="mb-5">
                         <h2 class="section-title">Beyond IT</h2>
