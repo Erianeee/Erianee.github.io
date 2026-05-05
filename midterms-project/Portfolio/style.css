@@ -1,0 +1,129 @@
+/* --- Global Styles --- */
+:root {
+    --sage-green: #e3f9e9;
+    --medium-green: #d1e8da;
+    --deep-green: #1b5e20;
+    --accent-green: #2e7d32;
+    --soft-cream: #fdfcf1;
+    --badge-bg: #81c784;
+}
+
+body {
+    background: linear-gradient(135deg, var(--sage-green), var(--medium-green), var(--soft-cream));
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+    color: #333;
+    scroll-behavior: smooth; /* Para smooth ang pag-click sa nav links */
+}
+
+/* --- Navigation --- */
+.navbar {
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.nav-link {
+    color: var(--accent-green) !important;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #1b5e20 !important;
+    text-decoration: underline;
+}
+
+/* --- Profile Card (Left Side) --- */
+.profile-card {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    backdrop-filter: blur(15px); /* Glassmorphism */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    position: sticky; /* Mananatili sa view habang nag-scroll sa desktop */
+    top: 20px;
+}
+
+.profile-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease;
+}
+
+.profile-card img:hover {
+    transform: scale(1.05);
+}
+
+/* --- Content Cards (Right Side) --- */
+.section-title {
+    color: var(--deep-green);
+    font-weight: 700;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Underline effect para sa titles */
+.section-title::after {
+    content: '';
+    width: 50%;
+    height: 3px;
+    background: var(--badge-bg);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    border-radius: 2px;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+/* --- Badges & Utility --- */
+.badge-green {
+    background-color: var(--badge-bg);
+    color: white;
+    padding: 8px 15px;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+.content-wrapper section {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Custom Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Para sa mobile responsiveness */
+@media (max-width: 768px) {
+    .profile-card {
+        position: relative;
+        top: 0;
+    }
+}
