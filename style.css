@@ -1,4 +1,3 @@
-/* --- Global Styles --- */
 :root {
     --sage-green: #e3f9e9;
     --medium-green: #d1e8da;
@@ -13,10 +12,10 @@ body {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     min-height: 100vh;
     color: #333;
-    scroll-behavior: smooth; /* Para smooth ang pag-click sa nav links */
+    scroll-behavior: smooth; 
 }
 
-/* --- Navigation --- */
+
 .navbar {
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
@@ -36,16 +35,16 @@ body {
     text-decoration: underline;
 }
 
-/* --- Profile Card (Left Side) --- */
+
 .profile-card {
     background: rgba(255, 255, 255, 0.7);
     border-radius: 20px;
     padding: 30px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     text-align: center;
-    backdrop-filter: blur(15px); /* Glassmorphism */
+    backdrop-filter: blur(15px); 
     border: 1px solid rgba(255, 255, 255, 0.4);
-    position: sticky; /* Mananatili sa view habang nag-scroll sa desktop */
+    position: sticky; 
     top: 20px;
 }
 
@@ -64,7 +63,7 @@ body {
     transform: scale(1.05);
 }
 
-/* --- Content Cards (Right Side) --- */
+
 .section-title {
     color: var(--deep-green);
     font-weight: 700;
@@ -73,7 +72,7 @@ body {
     display: inline-block;
 }
 
-/* Underline effect para sa titles */
+
 .section-title::after {
     content: '';
     width: 50%;
@@ -101,7 +100,7 @@ body {
     background: #fff;
 }
 
-/* --- Badges & Utility --- */
+
 .badge-green {
     background-color: var(--badge-bg);
     color: white;
@@ -114,13 +113,13 @@ body {
     animation: fadeIn 0.8s ease-in-out;
 }
 
-/* Custom Animation */
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Para sa mobile responsiveness */
+
 @media (max-width: 768px) {
     .profile-card {
         position: relative;
