@@ -22,7 +22,7 @@ async function fetchData() {
         allWeapons = weaponJson.data;
         allMaps = mapJson.data;
 
-        // Update stats
+      
         document.getElementById('agent-count').innerText = allAgents.length;
         document.getElementById('maps-count').innerText = allMaps.length;
         document.getElementById('total-count').innerText = allAgents.length + allCards.length + allWeapons.length + allMaps.length;
