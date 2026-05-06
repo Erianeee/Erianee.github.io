@@ -41,7 +41,7 @@
         <div class="tab-content" id="pills-tabContent">
             
     <div class="tab-pane fade show active" id="view-home" role="tabpanel">
-                <!-- Full Width Hero Section -->
+              
                 <div class="hero-banner" style="background: linear-gradient(135deg, #0f1923 0%, #1a2633 100%); min-height: 600px; position: relative; margin: -1.5rem -12px 0; display: flex; align-items: center; overflow: hidden;">
                     <div class="hero-bg-image" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('https://images.unsplash.com/photo-1538481143235-5d630028e4a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; opacity: 0.3;"></div>
                     <div class="container position-relative z-2">
@@ -72,7 +72,7 @@
                     </div>
                 </div>
 
-                <!-- Stats Section -->
+            
                 <div class="container mt-5 mb-5">
                     <div class="row g-4">
                         <div class="col-md-4">
@@ -99,7 +99,7 @@
                     </div>
                 </div>
 
-                <!-- Featured Agents Section -->
+                
                 <div class="container mb-5">
                     <div class="row mb-4">
                         <div class="col-12">
@@ -110,7 +110,7 @@
                     <div class="row g-3" id="featured-agents-container"></div>
                 </div>
 
-                <!-- Video Section -->
+                
                 <div class="container mb-5">
                     <div class="row mb-4">
                         <div class="col-12">
@@ -134,7 +134,7 @@
                     </div>
                 </div>
 
-                <!-- Gallery Section -->
+                
                 <div class="container mb-5">
                     <div class="row mb-4">
                         <div class="col-12">
@@ -161,7 +161,7 @@
                     </div>
                 </div>
 
-                <!-- CTA Section -->
+                
                 <div class="cta-banner p-5 mb-5" style="background: linear-gradient(135deg, rgba(255,70,85,0.15) 0%, rgba(0,242,254,0.15) 100%); border: 2px solid rgba(255,70,85,0.3); border-radius: 12px; text-align: center;">
                     <h2 class="text-uppercase fw-bold mb-3" style="font-size: 2rem;">Ready to Compete?</h2>
                     <p class="text-white mb-4 fs-5">Browse agents, maps, weapons, and collect all player cards</p>
@@ -316,7 +316,7 @@
             const container = document.getElementById('featured-agents-container');
             container.innerHTML = '';
             
-            // Show first 4 agents as featured
+            
             const featured = allAgents.slice(0, 4);
             featured.forEach(agent => {
                 const card = document.createElement('div');
@@ -336,7 +336,7 @@
         
      
 
-        // Fetch Data from APIs
+       
         async function fetchData() {
             try {
                 console.log('Starting to fetch data...');
@@ -459,7 +459,7 @@
             document.getElementById('weapon-modal-title').innerText = weapon.displayName;
             document.getElementById('weapon-modal-img').src = weapon.displayIcon;
 
-            // Display weapon stats
+           
             const statsContainer = document.getElementById('weapon-stats');
             statsContainer.innerHTML = `
                 <div class="row g-2">
@@ -474,7 +474,7 @@
                 </div>
             `;
 
-            // Display skins
+            
             const skinsContainer = document.getElementById('weapon-skins-container');
             skinsContainer.innerHTML = '';
             
@@ -524,7 +524,7 @@
             document.getElementById('map-modal-name').innerText = map.displayName;
             document.getElementById('map-modal-img').src = map.splash;
 
-            // Display map info
+            
             const infoContainer = document.getElementById('map-info');
             infoContainer.innerHTML = `
                 <div class="col-sm-6">
@@ -554,7 +554,7 @@
             const activeTab = document.querySelector('.nav-link.active').id;
 
             if (activeTab === 'home-tab') {
-                return; // Search disabled on home page
+                return; 
             } else if (activeTab === 'agents-tab') {
                 const filtered = allAgents.filter(a => a.displayName.toLowerCase().includes(val) || a.description.toLowerCase().includes(val));
                 displayAgents(filtered);
