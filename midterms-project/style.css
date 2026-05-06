@@ -245,7 +245,7 @@ body {
     color: var(--val-red) !important;
 }
 
-/* Dashboard Styles */
+
 .hero-banner {
     animation: fadeIn 0.8s ease;
 }
