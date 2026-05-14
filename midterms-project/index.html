@@ -3,9 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Valorant | Agents & Cards</title>
+    <title>Valorant </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        body.light-mode {
+            background-color: #f5f5f5 !important;
+            color: #333333 !important;
+        }
+
+        body.light-mode .navbar {
+            background-color: #ffffff !important;
+            border-bottom-color: #ff4655;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        body.light-mode .nav-pills .nav-link {
+            color: #666;
+        }
+
+        body.light-mode .agent-card,
+        body.light-mode .weapon-card,
+        body.light-mode .map-card {
+            background-color: #e8e8e8 !important;
+            border-color: #ddd !important;
+        }
+
+        body.light-mode .agent-modal-content {
+            background-color: #f5f5f5 !important;
+        }
+
+        body.light-mode .bg-dark-card {
+            background-color: #e8e8e8 !important;
+        }
+
+        body.light-mode .modal-img-bg {
+            background-color: #f0f0f0 !important;
+        }
+
+        body.light-mode .form-control {
+            background-color: #e0e0e0 !important;
+            color: #333 !important;
+            border-color: #ddd !important;
+        }
+
+        body.light-mode .form-control::placeholder {
+            color: #999;
+        }
+
+        body.light-mode h1, 
+        body.light-mode h2, 
+        body.light-mode h3, 
+        body.light-mode h4, 
+        body.light-mode h5, 
+        body.light-mode h6,
+        body.light-mode p,
+        body.light-mode span {
+            color: #333 !important;
+        }
+
+        body.light-mode .text-white {
+            color: #333 !important;
+        }
+
+        body.light-mode .text-cyan {
+            color: #0066cc !important;
+        }
+
+        body.light-mode .modal-backdrop.show {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        body.light-mode .card-name {
+            color: #666 !important;
+        }
+
+        body.light-mode .btn-outline-light {
+            color: #333;
+            border-color: #ddd;
+        }
+
+        body.light-mode .featured-agent-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+            border: 1px solid #ddd;
+        }
+
+        body.light-mode .featured-agent-info {
+            background: linear-gradient(to top, rgba(255,255,255,0.95), transparent);
+            color: #333;
+        }
+
+        body.light-mode .hero-banner {
+            background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%) !important;
+        }
+
+        body.light-mode .hero-banner h1 {
+            color: #333 !important;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        body.light-mode .hero-banner p {
+            color: #666 !important;
+        }
+
+        body.light-mode .hero-banner .btn-danger {
+            background-color: #ff4655;
+            border-color: #ff4655;
+            color: white;
+        }
+
+        body.light-mode .hero-banner .btn-outline-light {
+            color: #333;
+            border-color: #ddd;
+        }
+
+        body.light-mode .hero-banner .btn-outline-light:hover {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        body.light-mode .navbar-brand {
+            color: #000 !important;
+        }
+
+        body.light-mode .hero-bg-image {
+            opacity: 0.15 !important;
+        }
+
+        body.light-mode #view-agents,
+        body.light-mode #view-weapons,
+        body.light-mode #view-maps,
+        body.light-mode #view-cards {
+            background-color: #f5f5f5 !important;
+        }
+
+        body.light-mode #view-agents h1,
+        body.light-mode #view-weapons h1,
+        body.light-mode #view-maps h1,
+        body.light-mode #view-cards h1 {
+            color: #333 !important;
+        }
+
+        body.light-mode .agents-filter-bar .filter-btn {
+            color: #333;
+            border-color: #ddd;
+            background-color: transparent;
+        }
+
+        body.light-mode .agents-filter-bar .filter-btn:hover,
+        body.light-mode .agents-filter-bar .filter-btn.active {
+            background-color: #ff4655 !important;
+            border-color: #ff4655 !important;
+            color: white !important;
+        }
+
+        body.light-mode .weapon-card h5,
+        body.light-mode .map-card h5 {
+            color: #333 !important;
+        }
+
+        body.light-mode .player-card-item .card-name {
+            color: #666 !important;
+        }
+
+        body.light-mode .modal-content,
+        body.light-mode .agent-modal-content {
+            background-color: #f5f5f5 !important;
+        }
+
+        body.light-mode .modal-header {
+            background-color: #e8e8e8 !important;
+            border-bottom-color: #ddd !important;
+        }
+
+        body.light-mode .modal-header .btn-close-white {
+            filter: invert(1);
+        }
+
+        body.light-mode .modal-body {
+            background-color: #f5f5f5 !important;
+            color: #333 !important;
+        }
+
+        body.light-mode .modal-body h5,
+        body.light-mode .modal-body h6,
+        body.light-mode .modal-body p,
+        body.light-mode .modal-body small {
+            color: #333 !important;
+        }
+
+        body.light-mode #modal-name,
+        body.light-mode #modal-role,
+        body.light-mode #modal-desc,
+        body.light-mode #weapon-modal-title,
+        body.light-mode #map-modal-name {
+            color: #333 !important;
+        }
+
+        body.light-mode #weapon-stats {
+            color: #333 !important;
+        }
+
+        body.light-mode #weapon-stats small,
+        body.light-mode #weapon-stats p {
+            color: #333 !important;
+        }
+
+        body.light-mode #weapon-stats .text-white {
+            color: #333 !important;
+        }
+
+        body.light-mode .skin-item {
+            background-color: #e8e8e8 !important;
+            border-color: #ddd !important;
+        }
+
+        body.light-mode .skin-item h6,
+        body.light-mode .skin-item p {
+            color: #333 !important;
+        }
+
+        body.light-mode #map-info {
+            color: #333 !important;
+        }
+
+        body.light-mode #map-info small,
+        body.light-mode #map-info p {
+            color: #333 !important;
+        }
+
+        body.light-mode .modal-img-bg {
+            background-color: #e8e8e8 !important;
+        }
+
+        body.light-mode .bg-black {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        body.light-mode .bg-opacity-25 {
+            background-color: rgba(255, 255, 255, 0.15) !important;
+        }
+
+        body.light-mode .border-secondary {
+            border-color: #ddd !important;
+        }
+    </style>
 </head>
 <body>
 
@@ -31,8 +273,11 @@
                 </li>
             </ul>
 
-            <div class="w-25">
+            <div class="d-flex gap-2 align-items-center w-25">
                 <input type="text" id="globalSearch" class="form-control bg-secondary text-white border-0 rounded-pill" placeholder="Search...">
+                <button id="themeToggle" class="btn btn-outline-light rounded-pill p-2" title="Toggle Dark/Light Mode" style="min-width: 40px;">
+                    <span id="themeIcon">🌙</span>
+                </button>
             </div>
         </div>
     </nav>
@@ -41,8 +286,8 @@
         <div class="tab-content" id="pills-tabContent">
             
     <div class="tab-pane fade show active" id="view-home" role="tabpanel">
-              
-                <div class="hero-banner" style="background: linear-gradient(135deg, #0f1923 0%, #1a2633 100%); min-height: 600px; position: relative; margin: -1.5rem -12px 0; display: flex; align-items: center; overflow: hidden;">
+
+        <div class="hero-banner" style="background: linear-gradient(135deg, #0f1923 0%, #1a2633 100%); min-height: 600px; position: relative; margin: -1.5rem -12px 0; display: flex; align-items: center; overflow: hidden;">
                     <div class="hero-bg-image" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('https://images.unsplash.com/photo-1538481143235-5d630028e4a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; opacity: 0.3;"></div>
                     <div class="container position-relative z-2">
                         <div class="row align-items-center">
@@ -72,7 +317,6 @@
                     </div>
                 </div>
 
-            
                 <div class="container mt-5 mb-5">
                     <div class="row g-4">
                         <div class="col-md-4">
@@ -99,7 +343,6 @@
                     </div>
                 </div>
 
-                
                 <div class="container mb-5">
                     <div class="row mb-4">
                         <div class="col-12">
@@ -110,7 +353,6 @@
                     <div class="row g-3" id="featured-agents-container"></div>
                 </div>
 
-                
                 <div class="container mb-5">
                     <div class="row mb-4">
                         <div class="col-12">
@@ -134,7 +376,6 @@
                     </div>
                 </div>
 
-                
                 <div class="container mb-5">
                     <div class="row mb-4">
                         <div class="col-12">
@@ -161,7 +402,6 @@
                     </div>
                 </div>
 
-                
                 <div class="cta-banner p-5 mb-5" style="background: linear-gradient(135deg, rgba(255,70,85,0.15) 0%, rgba(0,242,254,0.15) 100%); border: 2px solid rgba(255,70,85,0.3); border-radius: 12px; text-align: center;">
                     <h2 class="text-uppercase fw-bold mb-3" style="font-size: 2rem;">Ready to Compete?</h2>
                     <p class="text-white mb-4 fs-5">Browse agents, maps, weapons, and collect all player cards</p>
@@ -182,8 +422,14 @@
                 </div>
             </div>
             <div class="tab-pane fade" id="view-agents" role="tabpanel">
-                <div class="row g-4" id="agent-container">
-                    </div>
+                <div class="agents-filter-bar mb-4 d-flex flex-wrap gap-2 align-items-center">
+                    <button class="btn btn-outline-light filter-btn active" data-role="All">All Agents</button>
+                    <button class="btn btn-outline-light filter-btn" data-role="Duelist">Duelist</button>
+                    <button class="btn btn-outline-light filter-btn" data-role="Initiator">Initiator</button>
+                    <button class="btn btn-outline-light filter-btn" data-role="Controller">Controller</button>
+                    <button class="btn btn-outline-light filter-btn" data-role="Sentinel">Sentinel</button>
+                </div>
+                <div class="row g-4" id="agent-container"></div>
             </div>
 
             <div class="tab-pane fade" id="view-weapons" role="tabpanel">
@@ -316,7 +562,6 @@
             const container = document.getElementById('featured-agents-container');
             container.innerHTML = '';
             
-            
             const featured = allAgents.slice(0, 4);
             featured.forEach(agent => {
                 const card = document.createElement('div');
@@ -336,7 +581,6 @@
         
      
 
-       
         async function fetchData() {
             try {
                 console.log('Starting to fetch data...');
@@ -365,10 +609,26 @@
                 displayCards(allCards);
                 displayWeapons(allWeapons);
                 displayMaps(allMaps);
+                initAgentFilters();
             } catch (error) {
                 console.error("Error fetching data:", error);
                 alert("Failed to load data from APIs. Check console for details.");
             }
+        }
+
+        function initAgentFilters() {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    const selectedRole = button.dataset.role;
+                    const filtered = selectedRole === 'All'
+                        ? allAgents
+                        : allAgents.filter(agent => agent.role && agent.role.displayName === selectedRole);
+                    displayAgents(filtered);
+                });
+            });
         }
 
         function displayAgents(agents) {
@@ -452,6 +712,17 @@
             });
         }
 
+        function getSkinPriceLabel(contentTierUuid) {
+            const tierPrices = {
+                '0cebb8be-46d7-c12a-d306-e9907bfc5a25': '1,775 Credits',
+                'e046854e-406c-37f4-6607-19a9ba8426fc': '2,975 Credits',
+                '60bca009-4182-7998-dee7-b8a2558dc369': '2,475 Credits',
+                '12683d76-48d7-84a3-4e09-6985794f0445': '2,175 Credits',
+                '411e4a55-4e59-7757-41f0-86a53f101bb5': '3,250 Credits'
+            };
+            return tierPrices[contentTierUuid] || 'Varies by skin tier';
+        }
+
         function showWeaponDetails(uuid) {
             const weapon = allWeapons.find(w => w.uuid === uuid);
             if(!weapon) return;
@@ -459,7 +730,6 @@
             document.getElementById('weapon-modal-title').innerText = weapon.displayName;
             document.getElementById('weapon-modal-img').src = weapon.displayIcon;
 
-           
             const statsContainer = document.getElementById('weapon-stats');
             statsContainer.innerHTML = `
                 <div class="row g-2">
@@ -474,7 +744,6 @@
                 </div>
             `;
 
-            
             const skinsContainer = document.getElementById('weapon-skins-container');
             skinsContainer.innerHTML = '';
             
@@ -486,7 +755,7 @@
                         <div class="skin-item p-3 rounded" style="background-color: rgba(255, 70, 85, 0.05); border: 1px solid rgba(255, 70, 85, 0.2); transition: all 0.3s;">
                             <img src="${skin.displayIcon || weapon.displayIcon}" class="img-fluid mb-2" style="max-height: 120px; object-fit: contain;">
                             <h6 class="text-uppercase fw-bold text-white small mb-1">${skin.displayName || 'Default'}</h6>
-
+                            <p class="skin-price mb-0">${getSkinPriceLabel(skin.contentTierUuid)}</p>
                         </div>
                     `;
                     skinsContainer.appendChild(skinCol);
@@ -524,7 +793,7 @@
             document.getElementById('map-modal-name').innerText = map.displayName;
             document.getElementById('map-modal-img').src = map.splash;
 
-            
+            // Display map info
             const infoContainer = document.getElementById('map-info');
             infoContainer.innerHTML = `
                 <div class="col-sm-6">
@@ -554,7 +823,7 @@
             const activeTab = document.querySelector('.nav-link.active').id;
 
             if (activeTab === 'home-tab') {
-                return; 
+                return; // Search disabled on home page
             } else if (activeTab === 'agents-tab') {
                 const filtered = allAgents.filter(a => a.displayName.toLowerCase().includes(val) || a.description.toLowerCase().includes(val));
                 displayAgents(filtered);
@@ -571,6 +840,28 @@
         }
 
         document.getElementById('globalSearch').addEventListener('input', handleSearch);
+
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const htmlElement = document.documentElement;
+
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        if (currentTheme === 'light') {
+            document.body.classList.add('light-mode');
+            themeIcon.textContent = '☀️';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            
+            if (document.body.classList.contains('light-mode')) {
+                localStorage.setItem('theme', 'light');
+                themeIcon.textContent = '☀️';
+            } else {
+                localStorage.setItem('theme', 'dark');
+                themeIcon.textContent = '🌙';
+            }
+        });
 
         fetchData();
     </script>
