@@ -793,7 +793,7 @@
             document.getElementById('map-modal-name').innerText = map.displayName;
             document.getElementById('map-modal-img').src = map.splash;
 
-            // Display map info
+            
             const infoContainer = document.getElementById('map-info');
             infoContainer.innerHTML = `
                 <div class="col-sm-6">
@@ -823,7 +823,7 @@
             const activeTab = document.querySelector('.nav-link.active').id;
 
             if (activeTab === 'home-tab') {
-                return; // Search disabled on home page
+                return; 
             } else if (activeTab === 'agents-tab') {
                 const filtered = allAgents.filter(a => a.displayName.toLowerCase().includes(val) || a.description.toLowerCase().includes(val));
                 displayAgents(filtered);
