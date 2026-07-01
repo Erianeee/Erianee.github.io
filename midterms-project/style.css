@@ -1,4 +1,4 @@
-﻿:root {
+:root {
     --val-dark: #0f1923;
     --val-nav: #111;
     --val-red: #ff4655;
@@ -446,7 +446,6 @@ body {
     color: black !important;
     box-shadow: 0 0 10px var(--val-red);
 }
-<<<<<<< HEAD
 
 html {
     scroll-behavior: smooth;
@@ -868,5 +867,3 @@ body.light-mode .cta-banner--home {
     background: linear-gradient(135deg, rgba(255, 70, 85, 0.08) 0%, rgba(0, 102, 204, 0.08) 100%);
     border-color: rgba(255, 70, 85, 0.25);
 }
-=======
->>>>>>> 80b9dea8ba204f91413edc37490d9fdcef1607ba
