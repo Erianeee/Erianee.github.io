@@ -1,134 +1,511 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Portfolio of Eriane Loraine M. Ladra — Information Technology student and web developer.">
     <title>Eriane Loraine M. Ladra | Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Eriane Loraine M. Ladra — Incoming 3rd Year IT Student at PUP Sto. Tomas, focused on web development and UI design.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&family=Source+Serif+4:wght@600;700&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <div class="container py-5">
-        <div class="row g-4">
+    <div class="bg-scene" aria-hidden="true">
+        <div class="bg-blob bg-blob-1"></div>
+        <div class="bg-blob bg-blob-2"></div>
+        <div class="bg-blob bg-blob-3"></div>
+        <div class="bg-blob bg-blob-4"></div>
+        <div class="bg-ring"></div>
+    </div>
 
-            <div class="col-lg-4 col-md-5">
+    <header class="top-bar">
+        <div class="container top-bar-inner">
+            <a href="#about" class="brand-mark" data-nav="about">
+                <span class="brand-dot"></span>
+                Eriane Loraine M. Ladra
+            </a>
+            <nav class="top-nav" aria-label="Main navigation">
+                <a href="#about" data-nav="about"><i class="bi bi-person"></i> About</a>
+                <a href="#academic" data-nav="academic"><i class="bi bi-folder2-open"></i> Academic</a>
+                <a href="#skills" data-nav="skills"><i class="bi bi-stars"></i> Skills</a>
+                <a href="#interests" data-nav="interests"><i class="bi bi-heart"></i> Interests</a>
+                <a href="#resume" data-nav="resume"><i class="bi bi-file-earmark-person"></i> Resume</a>
+                <a href="#contact" data-nav="contact"><i class="bi bi-envelope"></i> Contact</a>
+            </nav>
+            <div class="top-actions">
+                <button type="button" class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="bi bi-moon-fill"></i>
+                </button>
+                <button type="button" class="icon-btn menu-btn" id="menuToggle" aria-label="Open menu"
+                    aria-expanded="false">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </div>
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+            <a href="#about" data-nav="about"><i class="bi bi-person"></i> About</a>
+            <a href="#academic" data-nav="academic"><i class="bi bi-folder2-open"></i> Academic</a>
+            <a href="#skills" data-nav="skills"><i class="bi bi-stars"></i> Skills</a>
+            <a href="#interests" data-nav="interests"><i class="bi bi-heart"></i> Interests</a>
+            <a href="#resume" data-nav="resume"><i class="bi bi-file-earmark-person"></i> Resume</a>
+            <a href="#contact" data-nav="contact"><i class="bi bi-envelope"></i> Contact</a>
+        </nav>
+    </header>
+
+    <div class="container page-wrap pb-5">
+        <div class="row g-4 align-items-start">
+
+            <div class="col-lg-4">
                 <div class="profile-card">
                     <div class="profile-img-container">
                         <img src="profile.jpg" alt="Eriane Loraine M. Ladra">
                     </div>
-                    <h1 class="profile-name">Eriane Loraine M. Ladra</h1>
-                    <p class="profile-role">Information Technology Student · DIT 2-1</p>
 
-                    <ul class="contact-list">
-                        <li class="contact-item">
-                            <span class="contact-label">Email</span>
-                            <p class="contact-value">
-                                <a href="mailto:erianelorainem@gmail.com">erianelorainem@gmail.com</a>
-                            </p>
-                        </li>
-                        <li class="contact-item">
-                            <span class="contact-label">Education</span>
-                            <p class="contact-value">Polytechnic University of the Philippines<br>Sto. Tomas Campus</p>
-                        </li>
-                        <li class="contact-item">
-                            <span class="contact-label">Location</span>
-                            <p class="contact-value">Tanauan City, Batangas</p>
-                        </li>
-                    </ul>
+                    <h3 class="profile-name">Eriane Loraine M. Ladra</h3>
+                    <p class="profile-role">Information Technology Student</p>
+                    <p class="profile-tagline">Incoming 3rd Year · DIT 3-1</p>
+                    <div class="profile-status">
+                        <span class="status-dot"></span>
+                        Open to Internships &amp; Opportunities
+                    </div>
 
-                    <a href="https://erianeee.github.io/eri.github.io/" target="_blank" rel="noopener noreferrer" class="btn-repo">View GitHub Repository</a>
+                    <div class="profile-detail">
+                        <div class="detail-row">
+                            <span class="detail-icon"><i class="bi bi-envelope-fill"></i></span>
+                            <div>
+                                <strong>Email</strong>
+                                <span><a href="mailto:erianelorainem@gmail.com">erianelorainem@gmail.com</a></span>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-icon"><i class="bi bi-mortarboard-fill"></i></span>
+                            <div>
+                                <strong>Education</strong>
+                                <span>Polytechnic University of the Philippines — Sto. Tomas Campus</span>
+                            </div>
+                        </div>
+                        <div class="detail-row mb-0">
+                            <span class="detail-icon"><i class="bi bi-geo-alt-fill"></i></span>
+                            <div>
+                                <strong>Location</strong>
+                                <span>Tanauan City, Batangas</span>
+                            </div>
+                        </div>
+                    </div>
 
-                    <div class="profile-tags">
-                        <span class="tag">Web Development</span>
-                        <span class="tag">UI Design</span>
+                    <div class="profile-badges">
+                        <span class="badge-custom">Web Development</span>
+                        <span class="badge-custom">UI Design</span>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-8 col-md-7">
-                <main>
-                    <nav class="site-nav" aria-label="Page sections">
-                        <a href="#about">About</a>
-                        <a href="#academic">Academic</a>
-                        <a href="#skills">Skills</a>
-                        <a href="#interests">Interests</a>
-                    </nav>
+            <div class="col-lg-8 main-content">
 
-                    <section id="about">
-                        <h2 class="section-title">About Overview</h2>
-                        <div class="content-card">
-                            <p class="lead">Second-year Information Technology student focused on building clean, responsive web experiences.</p>
-                            <p>My current coursework centers on the TCP/IP protocol suite and Windows Server 2022 administration. Outside the classroom, I develop front-end projects that prioritize usability, structure, and modern design principles.</p>
+                <div class="page-views" id="pageViews">
+
+                    <div class="page-view active" id="page-about" data-page="about">
+                        <section class="hero-banner mb-4">
+                            <div class="hero-glow"></div>
+                            <p class="hero-eyebrow">Incoming 3rd Year IT Student · PUP Sto. Tomas</p>
+                            <h1 class="hero-title">Building clean, responsive <span class="gradient-text">web</span> experiences.</h1>
+                            <p class="hero-sub">
+                                Incoming third-year Information Technology student focused on building clean, responsive web
+                                experiences with strong foundations in networking and system administration.
+                            </p>
+                            <div class="hero-typed">
+                                Focused on <span id="typedText" class="typed-highlight"></span><span
+                                    class="typed-cursor">|</span>
+                            </div>
+                            <div class="hero-actions">
+                                <a href="#academic" class="btn btn-repo btn-sm-hero" data-nav="academic">
+                                    <i class="bi bi-folder2-open me-2"></i>View Academic Work
+                                </a>
+                                <a href="#skills" class="btn btn-outline-accent btn-sm-hero" data-nav="skills">
+                                    <i class="bi bi-stars me-2"></i>Technical Skills
+                                </a>
+                            </div>
+                        </section>
+
+                        <div class="stats-strip mb-4">
+                            <div class="stat-item">
+                                <strong data-count="3">0</strong>
+                                <span>Projects</span>
+                            </div>
+                            <div class="stat-item">
+                                <strong>Incoming</strong>
+                                <span>3rd Year</span>
+                            </div>
+                            <div class="stat-item">
+                                <strong>DIT</strong>
+                                <span>3-1</span>
+                            </div>
+                            <div class="stat-item stat-ai">
+                                <strong><i class="bi bi-palette-fill"></i></strong>
+                                <span>UI Design</span>
+                            </div>
                         </div>
-                    </section>
 
-                    <section id="academic">
-                        <h2 class="section-title">Academic Work</h2>
-                        <div class="projects-grid">
-
-                            <div class="info-card info-card--featured">
-                                <h5>Valorant Hub — Midterm Project</h5>
-                                <p>A comprehensive API-driven database of Valorant agents, weapons, maps, and player cards with search, modals, and responsive design.</p>
-                                <a href="https://erianeee.github.io/midterms/" target="_blank" rel="noopener noreferrer" class="card-link">View project</a>
-                            </div>
-
-                            <div class="info-card info-card--featured-alt">
-                                <h5>Activity Repository</h5>
-                                <p>Central hub for general web development activities and academic projects completed throughout the program.</p>
-                                <a href="https://erianeee.github.io/eri.github.io/" target="_blank" rel="noopener noreferrer" class="card-link">Visit repository</a>
-                            </div>
-
-                            <div class="projects-row">
-                                <div class="info-card">
-                                    <h5>Core Cosmetics</h5>
-                                    <p>A minimalist web platform for a beauty brand, featuring custom video players and integrated audio elements.</p>
-                                    <span class="skill-badge">HTML / CSS</span>
-                                    <span class="skill-badge">JavaScript</span>
+                        <section class="page-section">
+                            <div class="page-header">
+                                <div class="page-header-icon"><i class="bi bi-person-badge"></i></div>
+                                <div>
+                                    <span class="section-label">Overview</span>
+                                    <h2 class="section-title mb-0">About Overview</h2>
                                 </div>
-                                <div class="info-card">
-                                    <h5>Power Trail</h5>
-                                    <p>A collaborative Computer Programming 2 project developed and version-controlled on GitHub.</p>
-                                    <span class="skill-badge">GitHub</span>
-                                    <span class="skill-badge">Team Project</span>
+                            </div>
+                            <div class="info-card about-card">
+                                <p class="lead-highlight mb-3">
+                                    Incoming third-year Information Technology student focused on building clean, responsive web experiences.
+                                </p>
+                                <p class="lead-muted mb-4">
+                                    My current coursework centers on the TCP/IP protocol suite and Windows Server 2022
+                                    administration. Outside the classroom, I develop front-end projects that prioritize
+                                    usability, structure, and modern design principles.
+                                </p>
+                                <div class="about-highlights">
+                                    <div class="highlight-item">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <span>Responsive, accessible web interfaces</span>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <span>Clean UI with Bootstrap and modern CSS</span>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <span>API-driven projects with interactive components</span>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <span>Git, teamwork, and version control</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="page-view" id="page-academic" data-page="academic">
+                        <section class="page-section">
+                            <div class="page-header">
+                                <div class="page-header-icon"><i class="bi bi-folder2-open"></i></div>
+                                <div>
+                                    <span class="section-label">Portfolio</span>
+                                    <h2 class="section-title mb-0">Academic Work</h2>
+                                </div>
+                            </div>
+                            <div class="row g-4 projects-grid">
+                                <div class="col-md-6">
+                                    <div class="info-card project-card project-card-pro">
+                                        <div class="project-meta">
+                                            <span class="project-badge">Featured</span>
+                                            <span class="project-tech">JS · Bootstrap · API</span>
+                                        </div>
+                                        <div class="project-icon"><i class="bi bi-controller"></i></div>
+                                        <h5 class="fw-bold mb-2">Valorant Hub — Midterm Project</h5>
+                                        <p class="project-desc">A comprehensive API-driven database of Valorant agents,
+                                            weapons, maps, and player cards with search, modals, and responsive design.</p>
+                                        <a href="midterms-project/index.html" class="project-link">
+                                            View project <i class="bi bi-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="info-card project-card project-card-pro">
+                                        <div class="project-meta">
+                                            <span class="project-badge">A02</span>
+                                            <span class="project-tech">HTML · CSS · Bootstrap</span>
+                                        </div>
+                                        <div class="project-icon"><i class="bi bi-smartwatch"></i></div>
+                                        <h5 class="fw-bold mb-2">Apple Watch Series 10 - A02</h5>
+                                        <p class="project-desc">Activity 2 product specs page with Apple-inspired layout,
+                                            technical specifications table, and pricing cards for the Series 10 lineup.</p>
+                                        <a href="A02/index.html" class="project-link">
+                                            View project <i class="bi bi-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="info-card project-card project-card-pro project-card-alt">
+                                        <div class="project-meta">
+                                            <span class="project-badge badge-warm">Organization</span>
+                                            <span class="project-tech">GitHub · Team</span>
+                                        </div>
+                                        <div class="project-icon project-icon-warm"><i class="bi bi-heart-fill"></i></div>
+                                        <h5 class="fw-bold mb-2">PeetFinder</h5>
+                                        <p class="project-desc">A collaborative organization project built by our team to help
+                                            locate and connect pet-related information through a structured web platform.</p>
+                                        <div class="skill-tags mt-auto pt-3">
+                                            <span class="skill-tag">Organization</span>
+                                            <span class="skill-tag">Team Project</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="page-view" id="page-skills" data-page="skills">
+                        <section class="page-section">
+                            <div class="page-header">
+                                <div class="page-header-icon page-header-icon-skills"><i class="bi bi-stars"></i></div>
+                                <div>
+                                    <span class="section-label">Expertise</span>
+                                    <h2 class="section-title mb-0">Technical Skills</h2>
+                                </div>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="skill-card skill-card--dev">
+                                        <div class="skill-card-header">
+                                            <div class="skill-icon dev"><i class="bi bi-code-slash"></i></div>
+                                            <h6>Development</h6>
+                                        </div>
+                                        <p class="skill-card-text">Building responsive, accessible websites using Bootstrap 5,
+                                            semantic HTML, and modern CSS practices.</p>
+                                        <div class="skill-tags">
+                                            <span class="skill-tag">HTML &amp; CSS</span>
+                                            <span class="skill-tag">Bootstrap 5</span>
+                                            <span class="skill-tag">JavaScript</span>
+                                            <span class="skill-tag">Responsive Design</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="skill-card skill-card--net">
+                                        <div class="skill-card-header">
+                                            <div class="skill-icon bi"><i class="bi bi-hdd-network"></i></div>
+                                            <h6>Networking &amp; Systems</h6>
+                                        </div>
+                                        <p class="skill-card-text">Research and hands-on work with TCP/IP implementations
+                                            and server administration through Active Directory.</p>
+                                        <div class="skill-tags">
+                                            <span class="skill-tag highlight">TCP/IP</span>
+                                            <span class="skill-tag highlight">Windows Server 2022</span>
+                                            <span class="skill-tag highlight">Active Directory</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="page-view" id="page-interests" data-page="interests">
+                        <section class="page-section">
+                            <div class="page-header">
+                                <div class="page-header-icon page-header-icon-ai"><i class="bi bi-heart"></i></div>
+                                <div>
+                                    <span class="section-label">Personal</span>
+                                    <h2 class="section-title mb-0">Beyond IT</h2>
+                                </div>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="info-card interest-card">
+                                        <div class="interest-icon"><i class="bi bi-cake2"></i></div>
+                                        <h5 class="fw-bold mb-2">Home Baker</h5>
+                                        <p class="lead-muted mb-0">I enjoy refining recipes for Basque burnt cheesecakes and
+                                            cinnamon buns — experimenting until every batch feels just right.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="info-card interest-card">
+                                        <div class="interest-icon interest-icon--film"><i class="bi bi-film"></i></div>
+                                        <h5 class="fw-bold mb-2">Film Enthusiast</h5>
+                                        <p class="lead-muted mb-0">I follow long-form television series such as <em>Suits</em>,
+                                            appreciating strong character arcs and engaging storytelling.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="page-view" id="page-resume" data-page="resume">
+                        <section class="page-section">
+                            <div class="page-header">
+                                <div class="page-header-icon page-header-icon-resume"><i class="bi bi-file-earmark-person"></i></div>
+                                <div>
+                                    <span class="section-label">Professional Profile</span>
+                                    <h2 class="section-title mb-0">Resume Overview</h2>
                                 </div>
                             </div>
 
-                        </div>
-                    </section>
+                            <p class="section-intro mb-4">
+                                A snapshot of my education, skills, and projects — ready for employers and recruiters.
+                            </p>
 
-                    <section id="skills">
-                        <h2 class="section-title">Technical Skills</h2>
-                        <div class="skills-grid">
-                            <div class="info-card">
-                                <h6>Development</h6>
-                                <p>Building responsive, accessible websites using Bootstrap 5, semantic HTML, and modern CSS practices.</p>
+                            <div class="info-card resume-block mb-4">
+                                <h5 class="resume-block-title"><i class="bi bi-bullseye"></i> Career Objective</h5>
+                                <p class="resume-text mb-0">
+                                    Motivated incoming third-year IT student at PUP Sto. Tomas Campus with hands-on experience
+                                    in building responsive websites and academic projects. Looking to contribute to a team
+                                    that values clean design, continuous learning, and practical problem-solving.
+                                </p>
                             </div>
-                            <div class="info-card">
-                                <h6>Networking &amp; Systems</h6>
-                                <p>Research and hands-on work with TCP/IP implementations and server administration through Active Directory.</p>
+
+                            <div class="row g-4 mb-4">
+                                <div class="col-lg-6">
+                                    <div class="info-card resume-block h-100">
+                                        <h5 class="resume-block-title"><i class="bi bi-mortarboard"></i> Education</h5>
+                                        <div class="timeline">
+                                            <div class="timeline-item">
+                                                <div class="timeline-dot"></div>
+                                                <div class="timeline-content">
+                                                    <span class="timeline-date">2024 — Present</span>
+                                                    <h6>Diploma in Information Technology</h6>
+                                                    <p class="resume-meta">Polytechnic University of the Philippines — Sto. Tomas Campus</p>
+                                                    <p class="resume-text small mb-0">Incoming 3rd Year · DIT 3-1 · Web Development, UI Design, Networking</p>
+                                                </div>
+                                            </div>
+                                            <div class="timeline-item">
+                                                <div class="timeline-dot timeline-dot-muted"></div>
+                                                <div class="timeline-content">
+                                                    <span class="timeline-date">Relevant Coursework</span>
+                                                    <p class="resume-text small mb-0">Web Development · TCP/IP · System Administration · Windows Server · Programming</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="info-card resume-block h-100">
+                                        <h5 class="resume-block-title"><i class="bi bi-briefcase"></i> Projects</h5>
+                                        <div class="timeline">
+                                            <div class="timeline-item">
+                                                <div class="timeline-dot"></div>
+                                                <div class="timeline-content">
+                                                    <span class="timeline-date">Academic · A02</span>
+                                                    <h6>Apple Watch Series 10 — Product Specs</h6>
+                                                    <p class="resume-text small">Apple-inspired product page with specs table, pricing cards, and responsive Bootstrap layout.</p>
+                                                </div>
+                                            </div>
+                                            <div class="timeline-item">
+                                                <div class="timeline-dot"></div>
+                                                <div class="timeline-content">
+                                                    <span class="timeline-date">Academic · 2025</span>
+                                                    <h6>Valorant Hub — Midterm Project</h6>
+                                                    <p class="resume-text small">API-driven Valorant database with agents, weapons, maps, search, modals, and responsive UI.</p>
+                                                </div>
+                                            </div>
+                                            <div class="timeline-item">
+                                                <div class="timeline-dot timeline-dot-muted"></div>
+                                                <div class="timeline-content">
+                                                    <span class="timeline-date">Organization</span>
+                                                    <h6>PeetFinder — Team Project</h6>
+                                                    <p class="resume-text small mb-0">Collaborative organization project developed by our team as a pet finder web platform.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </section>
 
-                    <section id="interests">
-                        <h2 class="section-title">Beyond IT</h2>
-                        <div class="interests-card">
-                            <span class="interests-label">Personal</span>
-                            <h5>Home Baker &amp; Film Enthusiast</h5>
-                            <p>Outside of development, I enjoy refining recipes for Basque burnt cheesecakes and cinnamon buns, and following long-form television series such as <em>Suits</em>.</p>
-                        </div>
-                    </section>
+                            <div class="info-card resume-block">
+                                <h5 class="resume-block-title"><i class="bi bi-people"></i> Soft Skills</h5>
+                                <div class="soft-skills-grid">
+                                    <span class="soft-skill"><i class="bi bi-lightbulb"></i> Problem Solving</span>
+                                    <span class="soft-skill"><i class="bi bi-people-fill"></i> Teamwork</span>
+                                    <span class="soft-skill"><i class="bi bi-chat-dots"></i> Communication</span>
+                                    <span class="soft-skill"><i class="bi bi-clock"></i> Time Management</span>
+                                    <span class="soft-skill"><i class="bi bi-arrow-repeat"></i> Adaptability</span>
+                                    <span class="soft-skill"><i class="bi bi-book"></i> Fast Learner</span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
 
-                    <footer class="site-footer">
-                        <p>&copy; 2026 Eriane Loraine M. Ladra. All rights reserved.</p>
-                    </footer>
-                </main>
+                    <div class="page-view" id="page-contact" data-page="contact">
+                        <section class="page-section">
+                            <div class="page-header">
+                                <div class="page-header-icon page-header-icon-contact"><i class="bi bi-envelope-heart"></i></div>
+                                <div>
+                                    <span class="section-label">Let's Connect</span>
+                                    <h2 class="section-title mb-0">Contact Me</h2>
+                                </div>
+                            </div>
+                            <div class="info-card contact-card">
+                                <p class="lead-muted mb-4">
+                                    Interested in an internship, freelance project, or collaboration? I'd love to hear from you.
+                                </p>
+                                <div class="contact-info-grid mb-4">
+                                    <div class="contact-info-item">
+                                        <i class="bi bi-envelope-fill"></i>
+                                        <div>
+                                            <strong>Email</strong>
+                                            <span>erianelorainem@gmail.com</span>
+                                        </div>
+                                    </div>
+                                    <div class="contact-info-item">
+                                        <i class="bi bi-geo-alt-fill"></i>
+                                        <div>
+                                            <strong>Location</strong>
+                                            <span>Tanauan City, Batangas</span>
+                                        </div>
+                                    </div>
+                                    <div class="contact-info-item">
+                                        <i class="bi bi-mortarboard-fill"></i>
+                                        <div>
+                                            <strong>Education</strong>
+                                            <span>PUP Sto. Tomas · Incoming 3rd Year</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact-actions">
+                                    <a href="mailto:erianelorainem@gmail.com" class="btn btn-repo">
+                                        <i class="bi bi-envelope me-2"></i>Send Email
+                                    </a>
+                                    <button type="button" class="btn btn-outline-accent" id="copyEmail"
+                                        data-email="erianelorainem@gmail.com">
+                                        <i class="bi bi-clipboard me-2"></i>Copy Email
+                                    </button>
+                                    <a href="#resume" class="btn btn-resume-outline" data-nav="resume">
+                                        <i class="bi bi-file-earmark-person me-2"></i>View Resume
+                                    </a>
+                                    <a href="https://github.com/Erianeee" target="_blank" rel="noopener noreferrer"
+                                        class="btn btn-ghost">
+                                        <i class="bi bi-github me-2"></i>GitHub Profile
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                </div>
+
+                <footer class="site-footer-portfolio">
+                    <div class="footer-divider">
+                        <span></span>
+                        <i class="bi bi-diamond-fill"></i>
+                        <span></span>
+                    </div>
+                    <p class="mb-0">&copy; 2026 Eriane Loraine M. Ladra. All rights reserved.</p>
+                </footer>
+
             </div>
-
         </div>
     </div>
 
+    <button type="button" class="back-top" id="backTop" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <div class="toast-msg" id="toast" role="status" aria-live="polite"></div>
+
+    <div class="page-loader" id="pageLoader" aria-hidden="true"></div>
+
+    <script src="portfolio.js"></script>
 </body>
+
 </html>
