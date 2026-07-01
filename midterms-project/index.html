@@ -3,10 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
     <title>Valorant Hub | Agents & Cards</title>
+=======
+    <title>Valorant </title>
+>>>>>>> 80b9dea8ba204f91413edc37490d9fdcef1607ba
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        body.light-mode {
+            background-color: #f5f5f5 !important;
+            color: #333333 !important;
+        }
+
+        body.light-mode .navbar {
+            background-color: #ffffff !important;
+            border-bottom-color: #ff4655;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        body.light-mode .nav-pills .nav-link {
+            color: #666;
+        }
+
+        body.light-mode .agent-card,
+        body.light-mode .weapon-card,
+        body.light-mode .map-card {
+            background-color: #e8e8e8 !important;
+            border-color: #ddd !important;
+        }
+
+        body.light-mode .agent-modal-content {
+            background-color: #f5f5f5 !important;
+        }
+
+        body.light-mode .bg-dark-card {
+            background-color: #e8e8e8 !important;
+        }
+
+        body.light-mode .modal-img-bg {
+            background-color: #f0f0f0 !important;
+        }
+
+        body.light-mode .form-control {
+            background-color: #e0e0e0 !important;
+            color: #333 !important;
+            border-color: #ddd !important;
+        }
+
+        body.light-mode .form-control::placeholder {
+            color: #999;
+        }
+
+        body.light-mode h1, 
+        body.light-mode h2, 
+        body.light-mode h3, 
+        body.light-mode h4, 
+        body.light-mode h5, 
+        body.light-mode h6,
+        body.light-mode p,
+        body.light-mode span {
+            color: #333 !important;
+        }
+
+        body.light-mode .text-white {
+            color: #333 !important;
+        }
+
+        body.light-mode .text-cyan {
+            color: #0066cc !important;
+        }
+
+        body.light-mode .modal-backdrop.show {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        body.light-mode .card-name {
+            color: #666 !important;
+        }
+
+        body.light-mode .btn-outline-light {
+            color: #333;
+            border-color: #ddd;
+        }
+
+        body.light-mode .featured-agent-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+            border: 1px solid #ddd;
+        }
+
+        body.light-mode .featured-agent-info {
+            background: linear-gradient(to top, rgba(255,255,255,0.95), transparent);
+            color: #333;
+        }
+
+        body.light-mode .hero-banner {
+            background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%) !important;
+        }
+
+        body.light-mode .hero-banner h1 {
+            color: #333 !important;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        body.light-mode .hero-banner p {
+            color: #666 !important;
+        }
+
+        body.light-mode .hero-banner .btn-danger {
+            background-color: #ff4655;
+            border-color: #ff4655;
+            color: white;
+        }
+
+        body.light-mode .hero-banner .btn-outline-light {
+            color: #333;
+            border-color: #ddd;
+        }
+
+        body.light-mode .hero-banner .btn-outline-light:hover {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        body.light-mode .navbar-brand {
+            color: #000 !important;
+        }
+
+        body.light-mode .hero-bg-image {
+            opacity: 0.15 !important;
+        }
+
+        body.light-mode #view-agents,
+        body.light-mode #view-weapons,
+        body.light-mode #view-maps,
+        body.light-mode #view-cards {
+            background-color: #f5f5f5 !important;
+        }
+
+        body.light-mode #view-agents h1,
+        body.light-mode #view-weapons h1,
+        body.light-mode #view-maps h1,
+        body.light-mode #view-cards h1 {
+            color: #333 !important;
+        }
+
+        body.light-mode .agents-filter-bar .filter-btn {
+            color: #333;
+            border-color: #ddd;
+            background-color: transparent;
+        }
+
+        body.light-mode .agents-filter-bar .filter-btn:hover,
+        body.light-mode .agents-filter-bar .filter-btn.active {
+            background-color: #ff4655 !important;
+            border-color: #ff4655 !important;
+            color: white !important;
+        }
+
+        body.light-mode .weapon-card h5,
+        body.light-mode .map-card h5 {
+            color: #333 !important;
+        }
+
+        body.light-mode .player-card-item .card-name {
+            color: #666 !important;
+        }
+
+        body.light-mode .modal-content,
+        body.light-mode .agent-modal-content {
+            background-color: #f5f5f5 !important;
+        }
+
+        body.light-mode .modal-header {
+            background-color: #e8e8e8 !important;
+            border-bottom-color: #ddd !important;
+        }
+
+        body.light-mode .modal-header .btn-close-white {
+            filter: invert(1);
+        }
+
+        body.light-mode .modal-body {
+            background-color: #f5f5f5 !important;
+            color: #333 !important;
+        }
+
+        body.light-mode .modal-body h5,
+        body.light-mode .modal-body h6,
+        body.light-mode .modal-body p,
+        body.light-mode .modal-body small {
+            color: #333 !important;
+        }
+
+        body.light-mode #modal-name,
+        body.light-mode #modal-role,
+        body.light-mode #modal-desc,
+        body.light-mode #weapon-modal-title,
+        body.light-mode #map-modal-name {
+            color: #333 !important;
+        }
+
+        body.light-mode #weapon-stats {
+            color: #333 !important;
+        }
+
+        body.light-mode #weapon-stats small,
+        body.light-mode #weapon-stats p {
+            color: #333 !important;
+        }
+
+        body.light-mode #weapon-stats .text-white {
+            color: #333 !important;
+        }
+
+        body.light-mode .skin-item {
+            background-color: #e8e8e8 !important;
+            border-color: #ddd !important;
+        }
+
+        body.light-mode .skin-item h6,
+        body.light-mode .skin-item p {
+            color: #333 !important;
+        }
+
+        body.light-mode #map-info {
+            color: #333 !important;
+        }
+
+        body.light-mode #map-info small,
+        body.light-mode #map-info p {
+            color: #333 !important;
+        }
+
+        body.light-mode .modal-img-bg {
+            background-color: #e8e8e8 !important;
+        }
+
+        body.light-mode .bg-black {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        body.light-mode .bg-opacity-25 {
+            background-color: rgba(255, 255, 255, 0.15) !important;
+        }
+
+        body.light-mode .border-secondary {
+            border-color: #ddd !important;
+        }
+    </style>
 </head>
 <body>
 <script>if(localStorage.getItem('theme')==='light')document.body.classList.add('light-mode');</script>
@@ -38,12 +284,20 @@
                 </li>
                 </ul>
 
+<<<<<<< HEAD
                 <div class="navbar-tools mt-3 mt-lg-0 mb-2 mb-lg-0">
                     <input type="text" id="globalSearch" class="form-control bg-secondary text-white border-0 rounded-pill" placeholder="Search...">
                     <button id="themeToggle" class="theme-toggle-btn" type="button" aria-label="Toggle dark/light mode" title="Toggle theme">
                         <i class="bi bi-moon-fill" id="themeIcon"></i>
                     </button>
                 </div>
+=======
+            <div class="d-flex gap-2 align-items-center w-25">
+                <input type="text" id="globalSearch" class="form-control bg-secondary text-white border-0 rounded-pill" placeholder="Search...">
+                <button id="themeToggle" class="btn btn-outline-light rounded-pill p-2" title="Toggle Dark/Light Mode" style="min-width: 40px;">
+                    <span id="themeIcon">🌙</span>
+                </button>
+>>>>>>> 80b9dea8ba204f91413edc37490d9fdcef1607ba
             </div>
         </div>
     </nav>
@@ -53,8 +307,13 @@
             
     <div class="tab-pane fade show active" id="view-home" role="tabpanel">
 
+<<<<<<< HEAD
         <div class="hero-banner hero-banner--home">
                     <div class="hero-bg-image"></div>
+=======
+        <div class="hero-banner" style="background: linear-gradient(135deg, #0f1923 0%, #1a2633 100%); min-height: 600px; position: relative; margin: -1.5rem -12px 0; display: flex; align-items: center; overflow: hidden;">
+                    <div class="hero-bg-image" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('https://images.unsplash.com/photo-1538481143235-5d630028e4a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; opacity: 0.3;"></div>
+>>>>>>> 80b9dea8ba204f91413edc37490d9fdcef1607ba
                     <div class="container position-relative z-2">
                         <div class="row align-items-center">
                             <div class="col-lg-6">
@@ -168,8 +427,13 @@
                     </div>
                 </div>
 
+<<<<<<< HEAD
                 <div class="cta-banner cta-banner--home p-5 mb-5">
                     <h2 class="text-uppercase fw-bold mb-3 cta-title">Ready to Compete?</h2>
+=======
+                <div class="cta-banner p-5 mb-5" style="background: linear-gradient(135deg, rgba(255,70,85,0.15) 0%, rgba(0,242,254,0.15) 100%); border: 2px solid rgba(255,70,85,0.3); border-radius: 12px; text-align: center;">
+                    <h2 class="text-uppercase fw-bold mb-3" style="font-size: 2rem;">Ready to Compete?</h2>
+>>>>>>> 80b9dea8ba204f91413edc37490d9fdcef1607ba
                     <p class="text-white mb-4 fs-5">Browse agents, maps, weapons, and collect all player cards</p>
                     <div class="d-flex gap-2 justify-content-center flex-wrap">
                         <button class="btn btn-danger text-uppercase fw-bold px-5 py-3" onclick="goToTab('agents-tab')">
@@ -555,6 +819,10 @@
             document.getElementById('map-modal-name').innerText = map.displayName;
             document.getElementById('map-modal-img').src = map.splash;
 
+<<<<<<< HEAD
+=======
+            
+>>>>>>> 80b9dea8ba204f91413edc37490d9fdcef1607ba
             const infoContainer = document.getElementById('map-info');
             infoContainer.innerHTML = `
                 <div class="col-sm-6">
@@ -584,7 +852,11 @@
             const activeTab = document.querySelector('.nav-link.active').id;
 
             if (activeTab === 'home-tab') {
+<<<<<<< HEAD
                 return;
+=======
+                return; 
+>>>>>>> 80b9dea8ba204f91413edc37490d9fdcef1607ba
             } else if (activeTab === 'agents-tab') {
                 const filtered = allAgents.filter(a => a.displayName.toLowerCase().includes(val) || a.description.toLowerCase().includes(val));
                 displayAgents(filtered);
@@ -604,6 +876,7 @@
 
         const themeToggle = document.getElementById('themeToggle');
         const themeIcon = document.getElementById('themeIcon');
+<<<<<<< HEAD
 
         function applyTheme(theme) {
             if (theme === 'light') {
@@ -621,6 +894,26 @@
             const next = document.body.classList.contains('light-mode') ? 'dark' : 'light';
             localStorage.setItem('theme', next);
             applyTheme(next);
+=======
+        const htmlElement = document.documentElement;
+
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        if (currentTheme === 'light') {
+            document.body.classList.add('light-mode');
+            themeIcon.textContent = '☀️';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            
+            if (document.body.classList.contains('light-mode')) {
+                localStorage.setItem('theme', 'light');
+                themeIcon.textContent = '☀️';
+            } else {
+                localStorage.setItem('theme', 'dark');
+                themeIcon.textContent = '🌙';
+            }
+>>>>>>> 80b9dea8ba204f91413edc37490d9fdcef1607ba
         });
 
         fetchData();
