@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     --val-dark: #0f1923;
     --val-nav: #111;
     --val-red: #ff4655;
@@ -245,7 +245,7 @@ body {
     color: var(--val-red) !important;
 }
 
-/* Dashboard Styles */
+
 .hero-banner {
     animation: fadeIn 0.8s ease;
 }
@@ -445,4 +445,425 @@ body {
     background-color: white !important;
     color: black !important;
     box-shadow: 0 0 10px var(--val-red);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hero-banner--home {
+    background: linear-gradient(135deg, #0f1923 0%, #1a2633 100%);
+    min-height: 600px;
+    position: relative;
+    margin: -1.5rem -12px 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-bg-image {
+    position: absolute;
+    inset: 0;
+    background: url('https://images.unsplash.com/photo-1538481143235-5d630028e4a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+    opacity: 0.3;
+}
+
+.hero-spike-img {
+    width: min(100%, 500px);
+    height: auto;
+    opacity: 0.8;
+}
+
+.stat-showcase {
+    border-radius: 8px;
+}
+
+.stat-showcase--red {
+    background: linear-gradient(135deg, rgba(255, 70, 85, 0.1) 0%, rgba(255, 70, 85, 0.05) 100%);
+    border: 1px solid rgba(255, 70, 85, 0.3);
+}
+
+.stat-showcase--cyan {
+    background: linear-gradient(135deg, rgba(0, 242, 254, 0.1) 0%, rgba(0, 242, 254, 0.05) 100%);
+    border: 1px solid rgba(0, 242, 254, 0.3);
+}
+
+.stat-showcase--neutral {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-cyan-stat {
+    color: var(--val-cyan);
+}
+
+.section-heading {
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.section-line {
+    width: 60px;
+    height: 3px;
+    background: var(--val-red);
+    margin-bottom: 1rem;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-container iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+.gallery-item--home {
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    background: rgba(255, 70, 85, 0.15);
+}
+
+.cta-banner--home {
+    background: linear-gradient(135deg, rgba(255, 70, 85, 0.15) 0%, rgba(0, 242, 254, 0.15) 100%);
+    border: 2px solid rgba(255, 70, 85, 0.3);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 2rem;
+}
+
+.navbar-tools {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    min-width: 220px;
+}
+
+.navbar-tools .form-control {
+    flex: 1;
+}
+
+.theme-toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    background: rgba(255, 70, 85, 0.2);
+    border-color: var(--val-red);
+    color: var(--val-red);
+}
+
+.agents-filter-bar .filter-btn.active {
+    background-color: var(--val-red) !important;
+    border-color: var(--val-red) !important;
+    color: white !important;
+}
+
+.skin-item {
+    background-color: rgba(255, 70, 85, 0.05);
+    border: 1px solid rgba(255, 70, 85, 0.2);
+}
+
+.modal-header-dark {
+    background-color: #171a1c;
+}
+
+.modal-body-dark {
+    background-color: #171a1c;
+}
+
+@media (max-width: 991px) {
+    .navbar-tools {
+        width: 100%;
+        min-width: 0;
+    }
+
+    #globalSearch {
+        max-width: none;
+    }
+
+    #globalSearch:focus {
+        width: 100%;
+    }
+
+    .hero-banner--home {
+        min-height: auto;
+        padding: 3rem 0;
+        text-align: center;
+    }
+
+    .hero-banner--home .d-flex {
+        justify-content: center;
+    }
+}
+
+
+body.light-mode {
+    background-color: #f5f5f5 !important;
+    color: #333333 !important;
+}
+
+body.light-mode .navbar {
+    background-color: #ffffff !important;
+    border-bottom-color: #ff4655;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .nav-pills .nav-link {
+    color: #666;
+}
+
+body.light-mode .agent-card,
+body.light-mode .weapon-card,
+body.light-mode .map-card {
+    background-color: #e8e8e8 !important;
+    border-color: #ddd !important;
+}
+
+body.light-mode .agent-modal-content,
+body.light-mode .modal-content {
+    background-color: #f5f5f5 !important;
+}
+
+body.light-mode .bg-dark-card {
+    background-color: #e8e8e8 !important;
+}
+
+body.light-mode .modal-img-bg {
+    background-color: #f0f0f0 !important;
+}
+
+body.light-mode .form-control {
+    background-color: #e0e0e0 !important;
+    color: #333 !important;
+    border-color: #ddd !important;
+}
+
+body.light-mode .form-control::placeholder {
+    color: #999;
+}
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode h6,
+body.light-mode p,
+body.light-mode span {
+    color: #333 !important;
+}
+
+body.light-mode .text-white {
+    color: #333 !important;
+}
+
+body.light-mode .text-cyan,
+body.light-mode .text-cyan-stat {
+    color: #0066cc !important;
+}
+
+body.light-mode .modal-backdrop.show {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+body.light-mode .card-name {
+    color: #666 !important;
+}
+
+body.light-mode .btn-outline-light {
+    color: #333;
+    border-color: #ddd;
+}
+
+body.light-mode .featured-agent-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+    border: 1px solid #ddd;
+}
+
+body.light-mode .featured-agent-info {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.95), transparent);
+    color: #333;
+}
+
+body.light-mode .featured-agent-info h5,
+body.light-mode .agent-name-overlay h2,
+body.light-mode .map-img-container h5 {
+    color: #fff !important;
+}
+
+body.light-mode .hero-banner--home {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%) !important;
+}
+
+body.light-mode .hero-banner h1 {
+    color: #333 !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .hero-banner p {
+    color: #666 !important;
+}
+
+body.light-mode .hero-banner .btn-danger {
+    background-color: #ff4655;
+    border-color: #ff4655;
+    color: white;
+}
+
+body.light-mode .hero-banner .btn-outline-light {
+    color: #333;
+    border-color: #ddd;
+}
+
+body.light-mode .hero-banner .btn-outline-light:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+body.light-mode .navbar-brand {
+    color: #000 !important;
+}
+
+body.light-mode .hero-bg-image {
+    opacity: 0.15 !important;
+}
+
+body.light-mode #view-agents,
+body.light-mode #view-weapons,
+body.light-mode #view-maps,
+body.light-mode #view-cards {
+    background-color: #f5f5f5 !important;
+}
+
+body.light-mode .agents-filter-bar .filter-btn {
+    color: #333;
+    border-color: #ddd;
+    background-color: transparent;
+}
+
+body.light-mode .agents-filter-bar .filter-btn:hover,
+body.light-mode .agents-filter-bar .filter-btn.active {
+    background-color: #ff4655 !important;
+    border-color: #ff4655 !important;
+    color: white !important;
+}
+
+body.light-mode .weapon-card h5,
+body.light-mode .map-card h5 {
+    color: #333 !important;
+}
+
+body.light-mode .modal-header,
+body.light-mode .modal-header-dark {
+    background-color: #e8e8e8 !important;
+    border-bottom-color: #ddd !important;
+}
+
+body.light-mode .modal-header .btn-close-white {
+    filter: invert(1);
+}
+
+body.light-mode .modal-body,
+body.light-mode .modal-body-dark {
+    background-color: #f5f5f5 !important;
+    color: #333 !important;
+}
+
+body.light-mode #modal-name,
+body.light-mode #modal-role,
+body.light-mode #modal-desc,
+body.light-mode #weapon-modal-title,
+body.light-mode #map-modal-name {
+    color: #333 !important;
+}
+
+body.light-mode #weapon-stats,
+body.light-mode #weapon-stats small,
+body.light-mode #weapon-stats p,
+body.light-mode #weapon-stats .text-white {
+    color: #333 !important;
+}
+
+body.light-mode .skin-item {
+    background-color: #e8e8e8 !important;
+    border-color: #ddd !important;
+}
+
+body.light-mode .skin-item h6,
+body.light-mode .skin-item p {
+    color: #333 !important;
+}
+
+body.light-mode #map-info,
+body.light-mode #map-info small,
+body.light-mode #map-info p {
+    color: #333 !important;
+}
+
+body.light-mode .bg-black {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.light-mode .bg-opacity-25 {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+body.light-mode .border-secondary {
+    border-color: #ddd !important;
+}
+
+body.light-mode .theme-toggle-btn {
+    border-color: #ddd;
+    color: #333;
+}
+
+body.light-mode .theme-toggle-btn:hover {
+    background: rgba(255, 70, 85, 0.1);
+    border-color: #ff4655;
+    color: #ff4655;
+}
+
+body.light-mode .stat-showcase--neutral {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.01) 100%);
+    border-color: #ddd;
+}
+
+body.light-mode .cta-banner--home {
+    background: linear-gradient(135deg, rgba(255, 70, 85, 0.08) 0%, rgba(0, 102, 204, 0.08) 100%);
+    border-color: rgba(255, 70, 85, 0.25);
 }

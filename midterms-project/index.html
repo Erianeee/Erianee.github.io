@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Valorant | Agents & Cards</title>
+    <title>Valorant Hub | Agents & Cards</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<script>if(localStorage.getItem('theme')==='light')document.body.classList.add('light-mode');</script>
 
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-lg">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">VALORANT <span class="text-danger">HUB</span></a>
-            
-            <ul class="nav nav-pills ms-auto me-3" id="pills-tab" role="tablist">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="nav nav-pills ms-lg-auto me-lg-3 mt-3 mt-lg-0" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active rounded-pill text-uppercase" id="home-tab" data-bs-toggle="pill" data-bs-target="#view-home" type="button">Home</button>
                 </li>
@@ -29,10 +36,14 @@
                 <li class="nav-item" role="presentation">
                     <button class="nav-link rounded-pill text-uppercase" id="cards-tab" data-bs-toggle="pill" data-bs-target="#view-cards" type="button">Player Cards</button>
                 </li>
-            </ul>
+                </ul>
 
-            <div class="w-25">
-                <input type="text" id="globalSearch" class="form-control bg-secondary text-white border-0 rounded-pill" placeholder="Search...">
+                <div class="navbar-tools mt-3 mt-lg-0 mb-2 mb-lg-0">
+                    <input type="text" id="globalSearch" class="form-control bg-secondary text-white border-0 rounded-pill" placeholder="Search...">
+                    <button id="themeToggle" class="theme-toggle-btn" type="button" aria-label="Toggle dark/light mode" title="Toggle theme">
+                        <i class="bi bi-moon-fill" id="themeIcon"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
@@ -41,9 +52,9 @@
         <div class="tab-content" id="pills-tabContent">
             
     <div class="tab-pane fade show active" id="view-home" role="tabpanel">
-                <!-- Full Width Hero Section -->
-                <div class="hero-banner" style="background: linear-gradient(135deg, #0f1923 0%, #1a2633 100%); min-height: 600px; position: relative; margin: -1.5rem -12px 0; display: flex; align-items: center; overflow: hidden;">
-                    <div class="hero-bg-image" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('https://images.unsplash.com/photo-1538481143235-5d630028e4a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; opacity: 0.3;"></div>
+
+        <div class="hero-banner hero-banner--home">
+                    <div class="hero-bg-image"></div>
                     <div class="container position-relative z-2">
                         <div class="row align-items-center">
                             <div class="col-lg-6">
@@ -65,32 +76,31 @@
                             </div>
                             <div class="col-lg-6 text-center">
                                 <div class="agent-showcase">
-                                    <img src="pics/spike.png" alt="Spike" style="width: 500px; height: auto; opacity: 0.8;">
+                                    <img src="pics/spike.png" alt="Spike" class="hero-spike-img">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Stats Section -->
                 <div class="container mt-5 mb-5">
                     <div class="row g-4">
                         <div class="col-md-4">
-                            <div class="stat-showcase p-4" style="background: linear-gradient(135deg, rgba(255,70,85,0.1) 0%, rgba(255,70,85,0.05) 100%); border: 1px solid rgba(255,70,85,0.3); border-radius: 8px;">
+                            <div class="stat-showcase stat-showcase--red p-4">
                                 <h5 class="text-white text-uppercase small fw-bold mb-2">Total Agents</h5>
                                 <h2 id="agent-count" class="display-4 fw-bold text-danger mb-2">0</h2>
                                 <p class="text-white small mb-0">Playable characters ready for battle</p>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="stat-showcase p-4" style="background: linear-gradient(135deg, rgba(0,242,254,0.1) 0%, rgba(0,242,254,0.05) 100%); border: 1px solid rgba(0,242,254,0.3); border-radius: 8px;">
+                            <div class="stat-showcase stat-showcase--cyan p-4">
                                 <h5 class="text-white text-uppercase small fw-bold mb-2">Maps</h5>
-                                <h2 id="maps-count" class="display-4 fw-bold" style="color: var(--val-cyan); margin-bottom: 0.5rem;">0</h2>
+                                <h2 id="maps-count" class="display-4 fw-bold text-cyan-stat mb-2">0</h2>
                                 <p class="text-white small mb-0">Total Maps</p>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="stat-showcase p-4" style="background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;">
+                            <div class="stat-showcase stat-showcase--neutral p-4">
                                 <h5 class="text-white text-uppercase small fw-bold mb-2">Total Content</h5>
                                 <h2 id="total-count" class="display-4 fw-bold text-white mb-2">0</h2>
                                 <p class="text-white small mb-0">Combined database collection</p>
@@ -99,71 +109,67 @@
                     </div>
                 </div>
 
-                <!-- Featured Agents Section -->
                 <div class="container mb-5">
                     <div class="row mb-4">
                         <div class="col-12">
-                            <h3 class="text-uppercase fw-bold" style="font-size: 2rem; letter-spacing: 2px;">Featured Agents</h3>
-                            <div class="line" style="width: 60px; height: 3px; background: var(--val-red);"></div>
+                            <h3 class="section-heading text-uppercase fw-bold">Featured Agents</h3>
+                            <div class="section-line"></div>
                         </div>
                     </div>
                     <div class="row g-3" id="featured-agents-container"></div>
                 </div>
 
-                <!-- Video Section -->
                 <div class="container mb-5">
                     <div class="row mb-4">
                         <div class="col-12">
-                            <h3 class="text-uppercase fw-bold" style="font-size: 2rem; letter-spacing: 2px;">Learn the Game</h3>
-                            <div class="line" style="width: 60px; height: 3px; background: var(--val-red);"></div>
+                            <h3 class="section-heading text-uppercase fw-bold">Learn the Game</h3>
+                            <div class="section-line"></div>
                         </div>
                     </div>
                     <div class="row g-3">
                         <div class="col-md-6">
-                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;">
-                                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;" src="https://www.youtube.com/embed/e_E9W2vsRbQ" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/e_E9W2vsRbQ" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                             </div>
                             <p class="text-white mt-3">Valorant - Official Trailer</p>
                         </div>
                         <div class="col-md-6">
-                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;">
-                                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;" src="https://www.youtube.com/embed/IhhjcB2ZjIM" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/IhhjcB2ZjIM" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                             </div>
                             <p class="text-white mt-3">Valorant - Gameplay Guide</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Gallery Section -->
                 <div class="container mb-5">
                     <div class="row mb-4">
                         <div class="col-12">
-                            <h3 class="text-uppercase fw-bold" style="font-size: 2rem; letter-spacing: 2px;">Gallery</h3>
-                            <div class="line" style="width: 60px; height: 3px; background: var(--val-red);"></div>
+                            <h3 class="section-heading text-uppercase fw-bold">Gallery</h3>
+                            <div class="section-line"></div>
                         </div>
                     </div>
                     <div class="row g-3">
                         <div class="col-md-4">
-                            <div class="gallery-item" style="height: 300px; background: url('pics/gallery1.png') center/cover; border-radius: 8px; overflow: hidden; position: relative;">
-                                <div class="overlay" style="position: absolute; inset: 0; background: rgba(0,0,0,0.3);"></div>
+                            <div class="gallery-item gallery-item--home" style="background: url('pics/gallery1.png') center/cover;">
+                                <div class="gallery-overlay"></div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="gallery-item" style="height: 300px; background: url('pics/gallery2.png') center/cover; border-radius: 8px; overflow: hidden; position: relative;">
-                                <div class="overlay" style="position: absolute; inset: 0; background: rgba(0,0,0,0.3);"></div>
+                            <div class="gallery-item gallery-item--home" style="background: url('pics/gallery2.png') center/cover;">
+                                <div class="gallery-overlay"></div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="gallery-item" style="height: 300px; background: url('pics/gallery3.png') center/cover; border-radius: 8px; overflow: hidden; position: relative;">
-                                <div class="overlay" style="position: absolute; inset: 0; background: rgba(0,0,0,0.3);"></div>
+                            <div class="gallery-item gallery-item--home" style="background: url('pics/gallery3.png') center/cover;">
+                                <div class="gallery-overlay"></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- CTA Section -->
-                <div class="cta-banner p-5 mb-5" style="background: linear-gradient(135deg, rgba(255,70,85,0.15) 0%, rgba(0,242,254,0.15) 100%); border: 2px solid rgba(255,70,85,0.3); border-radius: 12px; text-align: center;">
-                    <h2 class="text-uppercase fw-bold mb-3" style="font-size: 2rem;">Ready to Compete?</h2>
+                <div class="cta-banner cta-banner--home p-5 mb-5">
+                    <h2 class="text-uppercase fw-bold mb-3 cta-title">Ready to Compete?</h2>
                     <p class="text-white mb-4 fs-5">Browse agents, maps, weapons, and collect all player cards</p>
                     <div class="d-flex gap-2 justify-content-center flex-wrap">
                         <button class="btn btn-danger text-uppercase fw-bold px-5 py-3" onclick="goToTab('agents-tab')">
@@ -182,8 +188,14 @@
                 </div>
             </div>
             <div class="tab-pane fade" id="view-agents" role="tabpanel">
-                <div class="row g-4" id="agent-container">
-                    </div>
+                <div class="agents-filter-bar mb-4 d-flex flex-wrap gap-2 align-items-center">
+                    <button class="btn btn-outline-light filter-btn active" data-role="All">All Agents</button>
+                    <button class="btn btn-outline-light filter-btn" data-role="Duelist">Duelist</button>
+                    <button class="btn btn-outline-light filter-btn" data-role="Initiator">Initiator</button>
+                    <button class="btn btn-outline-light filter-btn" data-role="Controller">Controller</button>
+                    <button class="btn btn-outline-light filter-btn" data-role="Sentinel">Sentinel</button>
+                </div>
+                <div class="row g-4" id="agent-container"></div>
             </div>
 
             <div class="tab-pane fade" id="view-weapons" role="tabpanel">
@@ -223,10 +235,10 @@
                                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                             </div>
                             <hr class="border-secondary">
-                            <h6 class="text-danger text-uppercase fw-bold small mt-2"> Description</h6>
+                            <h6 class="text-danger text-uppercase fw-bold small mt-2">Description</h6>
                             <p id="modal-desc" class="text-white small mb-4"></p>
                             
-                            <h6 class="text-danger text-uppercase fw-bold small"> Special Abilities</h6>
+                            <h6 class="text-danger text-uppercase fw-bold small">Special Abilities</h6>
                             <div id="modal-abilities" class="row g-2 mt-2"></div>
                         </div>
                     </div>
@@ -249,12 +261,12 @@
                                 <img src="" id="weapon-modal-img" class="img-fluid" style="max-height: 300px; object-fit: contain;">
                             </div>
                             <div class="col-md-8">
-                                <h6 class="text-danger text-uppercase fw-bold small mb-2">// Weapon Stats</h6>
+                                <h6 class="text-danger text-uppercase fw-bold small mb-2">Weapon Stats</h6>
                                 <div id="weapon-stats" class="mb-4"></div>
                             </div>
                         </div>
                         <hr class="border-secondary">
-                        <h6 class="text-danger text-uppercase fw-bold small mb-3">// Available Skins</h6>
+                        <h6 class="text-danger text-uppercase fw-bold small mb-3">Available Skins</h6>
                         <div class="row g-3" id="weapon-skins-container"></div>
                     </div>
                 </div>
@@ -273,7 +285,7 @@
                     <div class="p-4">
                         <h2 id="map-modal-name" class="text-uppercase fw-bold text-danger mb-3"></h2>
                         <hr class="border-secondary">
-                        <h6 class="text-danger text-uppercase fw-bold small mb-2">// Map Information</h6>
+                        <h6 class="text-danger text-uppercase fw-bold small mb-2">Map Information</h6>
                         <div id="map-info" class="row g-3 mb-4"></div>
                     </div>
                 </div>
@@ -316,7 +328,6 @@
             const container = document.getElementById('featured-agents-container');
             container.innerHTML = '';
             
-            // Show first 4 agents as featured
             const featured = allAgents.slice(0, 4);
             featured.forEach(agent => {
                 const card = document.createElement('div');
@@ -336,10 +347,8 @@
         
      
 
-        // Fetch Data from APIs
         async function fetchData() {
             try {
-                console.log('Starting to fetch data...');
                 const [agentRes, cardRes, weaponRes, mapRes] = await Promise.all([
                     fetch('https://valorant-api.com/v1/agents?isPlayableCharacter=true'),
                     fetch('https://valorant-api.com/v1/playercards'),
@@ -347,28 +356,41 @@
                     fetch('https://valorant-api.com/v1/maps')
                 ]);
                 
-                console.log('All fetches completed');
                 const agentJson = await agentRes.json();
                 const cardJson = await cardRes.json();
                 const weaponJson = await weaponRes.json();
                 const mapJson = await mapRes.json();
                 
-                console.log('JSON parsed successfully');
                 allAgents = agentJson.data;
                 allCards = cardJson.data;
                 allWeapons = weaponJson.data.filter(w => !w.displayName.includes('Melee'));
                 allMaps = mapJson.data;
 
-                console.log('Data assigned to variables:', {allAgents: allAgents.length, allCards: allCards.length, allWeapons: allWeapons.length, allMaps: allMaps.length});
                 updateDashboard();
                 displayAgents(allAgents);
                 displayCards(allCards);
                 displayWeapons(allWeapons);
                 displayMaps(allMaps);
+                initAgentFilters();
             } catch (error) {
                 console.error("Error fetching data:", error);
                 alert("Failed to load data from APIs. Check console for details.");
             }
+        }
+
+        function initAgentFilters() {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    const selectedRole = button.dataset.role;
+                    const filtered = selectedRole === 'All'
+                        ? allAgents
+                        : allAgents.filter(agent => agent.role && agent.role.displayName === selectedRole);
+                    displayAgents(filtered);
+                });
+            });
         }
 
         function displayAgents(agents) {
@@ -452,6 +474,17 @@
             });
         }
 
+        function getSkinPriceLabel(contentTierUuid) {
+            const tierPrices = {
+                '0cebb8be-46d7-c12a-d306-e9907bfc5a25': '1,775 Credits',
+                'e046854e-406c-37f4-6607-19a9ba8426fc': '2,975 Credits',
+                '60bca009-4182-7998-dee7-b8a2558dc369': '2,475 Credits',
+                '12683d76-48d7-84a3-4e09-6985794f0445': '2,175 Credits',
+                '411e4a55-4e59-7757-41f0-86a53f101bb5': '3,250 Credits'
+            };
+            return tierPrices[contentTierUuid] || 'Varies by skin tier';
+        }
+
         function showWeaponDetails(uuid) {
             const weapon = allWeapons.find(w => w.uuid === uuid);
             if(!weapon) return;
@@ -459,7 +492,6 @@
             document.getElementById('weapon-modal-title').innerText = weapon.displayName;
             document.getElementById('weapon-modal-img').src = weapon.displayIcon;
 
-            // Display weapon stats
             const statsContainer = document.getElementById('weapon-stats');
             statsContainer.innerHTML = `
                 <div class="row g-2">
@@ -474,7 +506,6 @@
                 </div>
             `;
 
-            // Display skins
             const skinsContainer = document.getElementById('weapon-skins-container');
             skinsContainer.innerHTML = '';
             
@@ -486,7 +517,7 @@
                         <div class="skin-item p-3 rounded" style="background-color: rgba(255, 70, 85, 0.05); border: 1px solid rgba(255, 70, 85, 0.2); transition: all 0.3s;">
                             <img src="${skin.displayIcon || weapon.displayIcon}" class="img-fluid mb-2" style="max-height: 120px; object-fit: contain;">
                             <h6 class="text-uppercase fw-bold text-white small mb-1">${skin.displayName || 'Default'}</h6>
-
+                            <p class="skin-price mb-0">${getSkinPriceLabel(skin.contentTierUuid)}</p>
                         </div>
                     `;
                     skinsContainer.appendChild(skinCol);
@@ -524,7 +555,6 @@
             document.getElementById('map-modal-name').innerText = map.displayName;
             document.getElementById('map-modal-img').src = map.splash;
 
-            // Display map info
             const infoContainer = document.getElementById('map-info');
             infoContainer.innerHTML = `
                 <div class="col-sm-6">
@@ -554,7 +584,7 @@
             const activeTab = document.querySelector('.nav-link.active').id;
 
             if (activeTab === 'home-tab') {
-                return; // Search disabled on home page
+                return;
             } else if (activeTab === 'agents-tab') {
                 const filtered = allAgents.filter(a => a.displayName.toLowerCase().includes(val) || a.description.toLowerCase().includes(val));
                 displayAgents(filtered);
@@ -571,6 +601,27 @@
         }
 
         document.getElementById('globalSearch').addEventListener('input', handleSearch);
+
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+
+        function applyTheme(theme) {
+            if (theme === 'light') {
+                document.body.classList.add('light-mode');
+                themeIcon.className = 'bi bi-sun-fill';
+            } else {
+                document.body.classList.remove('light-mode');
+                themeIcon.className = 'bi bi-moon-fill';
+            }
+        }
+
+        applyTheme(localStorage.getItem('theme') || 'dark');
+
+        themeToggle.addEventListener('click', () => {
+            const next = document.body.classList.contains('light-mode') ? 'dark' : 'light';
+            localStorage.setItem('theme', next);
+            applyTheme(next);
+        });
 
         fetchData();
     </script>
